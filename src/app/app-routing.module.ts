@@ -15,8 +15,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-  path:'products',
-  pathMatch:'full',
+  path: 'products',
+  pathMatch: 'full',
   loadChildren: './products/products.module#ProductsModule'
   }
 ];

@@ -16,6 +16,6 @@ import { PmMaterialModule } from '../material-module';
     HttpClientModule,
     PmMaterialModule
   ],
-  providers:[ProductDataService]
+  providers: [ProductDataService]
 })
 export class ProductsModule { }
