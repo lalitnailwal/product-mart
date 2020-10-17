@@ -13,8 +13,8 @@ async function insert(user) {
 }
 
 async function getUserByEmailIdAndPassword(email, password) {
-    let user = await User.findOne(id);
-
+    
+    let user = await User.findOne({ email });
     if(user) {
         user = user.toObject();
         delete user.hashedPassword;
@@ -26,8 +26,8 @@ async function getUserByEmailIdAndPassword(email, password) {
 
 
 async function getUserById(id) {
-    let user = await User.findById({ email });
-
+   
+    let user = await User.findOne(id);
     if(isUserValid(user, password, user.hashedPassword)) {
         user = user.toObject();
         delete user.hashedPassword;
